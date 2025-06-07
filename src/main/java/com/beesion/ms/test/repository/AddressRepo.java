@@ -30,7 +30,7 @@ public class AddressRepo {
     }
 
     public List<Address> findByPersonId(Long personId) {
-        return em.createQuery("SELECT a FROM adress a WHERE a.person.id = :id", Address.class)
+        return em.createQuery("SELECT a FROM Address a WHERE a.person.id = :id", Address.class)
                  .setParameter("id", personId)
                  .getResultList();
     }
